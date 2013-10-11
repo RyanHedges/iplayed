@@ -1,5 +1,7 @@
 require 'sinatra'
 
+$LOAD_PATH.unshift(File.expand_path('.'))
+
 get '/' do
  erb :index
 end
