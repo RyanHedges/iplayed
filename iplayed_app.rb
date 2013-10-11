@@ -1,6 +1,10 @@
 require 'sinatra'
+enable :sessions
 
 $LOAD_PATH.unshift(File.expand_path('.'))
+
+require 'initializers/activerecord'
+require 'initializers/dotenv'
 
 get '/' do
  erb :index

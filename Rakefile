@@ -1,3 +1,22 @@
+require 'sinatra/activerecord/rake'
+
+namespace :db do
+
+  desc "Create the database"
+  task :create do
+    puts "Creating database"
+    exec("createdb iplayed_dev")
+  end
+
+  desc "Drop the database"
+  task :drop do
+    puts "Dropping database"
+    exec("dropdb iplayed_dev")
+  end
+
+end
+
+
 begin
   require "rspec/core/rake_task"
 
